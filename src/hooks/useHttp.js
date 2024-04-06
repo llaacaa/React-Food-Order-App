@@ -17,7 +17,7 @@ async function sendHttpRequest(url, config) {
 export default function useHttp(url, config, initialData) {
   const [data, setData] = useState(initialData);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState();
 
   const sendRequest = useCallback(
     async function sendRequest(data) {
